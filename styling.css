@@ -15,52 +15,11 @@ body{
 
 
 
-/* If more than 1 div has a styling it gets stored here */
-
-/* Background color dark grey */
-
-.menu, .footerDiv, .sub-menu, .dienstenHomepage:hover, .ribbonHomepage button:hover{
-	background-color: #222931;
-}
-
-/* Text color dark grey */
-
-.ribbon button, .dienstenLink, .menu-items-div > a{
-	color: #222931;
-}
-
-/* Text color white */
-
-.menu li  a, .footerText, .dienstenHomepage:hover, .ribbonHomepage button:hover{
-	color: #ffffff;
-}
-
-/* background color yellow */
-
-.ribbon, .menu-items-div > div, .menu-items-div > a > div, .sub-menu-div a:nth-of-type(3):hover{
-	background-color: #ffe718;
-}
-
-.menu, .ribbon  h2, .ribbon button, .sub-menu > a{
-	font-weight: 500;
-}
-
-.ribbon h1, .ribbon h2{
-	font-weight: 700;
-}
-
-
-/* Text styling */ /*
-.menu ul li a, .mini-images > div > p{
-	font-family: 'Archivo', sans-serif;
-}
-
-
-
-
 /* Menu */
 
 .menu{
+	background-color: #222931;
+	font-weight: 500;
 	position: absolute;
 	width: 950px;
 	font-size: 12px;
@@ -68,6 +27,7 @@ body{
 
 .menu li a{
 	text-decoration: none;
+	color: #ffffff;
 	font-size: 14px;
 }
 
@@ -84,17 +44,22 @@ body{
 	margin: 15px 7.5px;
 }
 
-
-/* Sub-menu (about) */
-
-.sub-menu-div:hover .sub-menu{
-  	display: block;
+.home, .sub-menu-div{
+	float: left;
 }
+
+
+/* Sub-menu */
 
 .sub-menu{
 	background-color: #222931;
   	display: none;
   	position: absolute;
+  	padding-bottom: 10px;
+}
+
+.sub-menu-div:hover .sub-menu{
+  	display: block;
 }
 
 
@@ -109,8 +74,9 @@ body{
 	padding: 5px 0px;
 }
 
-.sub-menu a:nth-of-type(3){
-	margin-bottom: 10px;
+.sub-menu a:nth-of-type(3):hover{
+	background-color: #ffe718;
+  	color: black;
 }
 
 .sub-menu-div button{
@@ -123,32 +89,39 @@ body{
   	margin: 13px 0px;
 }
 
-
-
-.sub-menu a:nth-of-type(3):hover{
-  	color: black;
-}
-
-.home, .sub-menu-div{
-	float: left;
+.sub-menu-div:hover{
+	background-color: #ffe718;
 }
 
 
 
-/* Text between the images (ribbon) */
+/* Ribbon */
 
 .ribbon{
+	background-color: #ffe718;
+}
+
+.ribbonHomePage{
 	margin: 50px 0px;
+}
+
+.ribbonDienstenPage{
+	margin: 125px 0px 20px;
+}
+
+.ribbonHomePage, .ribbonDienstenPage{
 	padding: 30px 0px;
 }
 
 .ribbon h1{
+	font-weight: 700;
 	font-size: 34px;
 	padding: 0px 20px 0px 200px;
 	margin: 0px;
 }
 
 .ribbon h2{
+	font-weight: 500;
 	font-size: 16px;
 }
 
@@ -156,98 +129,91 @@ body{
 	display: inline-block;
 }
 
-
 .ribbon button{
 	border: none;
+	color: #222931;
 	font-weight: 500;
 	font-size: 12px;
-	padding: 7.5px 34px;
+	padding: calc(36.8px / 2 - calc(13.6px / 2)) 75px;
 	margin-left: 450px;
+}
+
+.ribbonHomePage button:hover{
+	background-color: #222931;
+	color: #ffffff;
 }
 
 
 
 
-/* banner items */
+/* Footer buttons */
 
 .menu-items-div{
 	display: block;
 	position: relative;
 	bottom: calc(183px / 4 * 1);
-	text-align: center;
 }
 
-.menu-items-div > div, .menu-items-div > a > div{
+.menu-items-div a{
+	color: #222931;
+}
+
+.menu-items-div div{
+	background-color: #ffe718;
 	text-align: center;
 	display: inline-block;
 	width: 300px;
+	margin: calc(46px / 3);
 }
 
-.menu-items-div > div > i, .menu-items-div > a > div > i{
+.dienstenHomePage:hover{
+	background-color: #222931;
+	color: #ffffff;
+
+}
+
+.menu-items-fonts{
 	float: left;
 	margin: calc(85.875px / 4) 0px 0px 20px;
 }
 
-
-.menu-items-div > div > h1, .menu-items-div > a > div > h1{
+.menu-items-title{
 	font-size: 22px;
 }
 
-.menu-items-div div > p, .menu-items-div > a > div > p{
+.menu-items-information{
 	font-weight: bold;
 	font-size: 14px;
 }
 
-.menu-items-div > div > h1, .menu-items > p, .menu-items-div > a > div > h1{
+.menu-items-title, .menu-items-information{
 	font-weight: 600;
 }
 
 
 
 
-
-
-.diensten{
-	margin: 0px 46px;
-}
-
-
-
-
-/* Line between banner items and the text */
-
-hr{
-	margin-top: 50px;
-}
-
-
-
-/* Text inside the 'Over ons' and the 'Contact' elements */
-
-.informationText{
-	width: 550px;
-}
-
+/* Text above the footer */
 
 .informationDiv{
 	display: block;
 	width: 1000px;
 }
 
-.informationText, .contact{
+.informationText{
 	display: inline-block;
+	width: 425px;
 }
 
+.informationText p, .informationContact{
+	font-weight: 400;
+	line-height: 18px;
+	font-size: 12px;
+}
 
-/* Over ons element */
-
-.informationText > h2, .informationContact > h2{
+.information-div-titles{
 	margin: 50px 0px;
 }
-
-
-/* Contact element */
-
 
 .informationContact{
 	float: right;
@@ -255,7 +221,11 @@ hr{
 	margin-right: 100px;
 }
 
-.informationContact > i{
+.informationContact p{
+	margin: 5px 0px;
+}
+
+.informationContact-fonts{
 	float: left;
 	margin-right: 10px;
 }
@@ -263,19 +233,78 @@ hr{
 
 
 
-
 /* Footer */
 
 .footerDiv{
-	margin-top: 20px;
+	background-color: #222931;
 	padding: 15px 0px;
-	
-
+	margin-top: 20px;
 }
 
 .footerText{
+	color: #ffffff;
 	text-align: right;
 	margin-right: 200px;
+}
+
+
+
+
+/* Only for the diensten page */
+
+
+/* Breadcrumb */
+
+.breadcrumb{
+	color: #5f656d;
+	margin: 50px 0px;
+}
+
+.breadcrumb-links{
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 12px;
+}
+
+.diensten-page-text-div{
+	width: 900px;
+}
+
+.diensten-page-text{
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+}
+
+
+.diensten-page-text-yellow{
+	position: relative;
+	display: inline-block;
+	color: #ffe718;
+}
+  
+.diensten-page-text-yellow-information{ 
+	visibility: hidden;
+	background-color: #aeb6be;
+	color: #fff;
+	position: absolute;
+	font-size: 12px;
+	font-weight: 400;
+	width: 180px;
+	padding: 10px 10px;
+}
+  
+.diensten-page-text-yellow:hover .diensten-page-text-yellow-information{
+	visibility: visible;
+}
+
+
+
+
+/* Information above the footer */
+
+.informationTextDiensten p{
+	color: #aeb6be;
 }
 
 
@@ -294,28 +323,30 @@ hr{
 }
 
 
+.footer{
+	position: relative;
+	margin-top: 50px;
+	width: 100%;
+}
 
 
-
-
-
-.mini-images{
+.banner{
 	margin-top: 50px;
 	display: block;
 }
 
-.mini-images > div, .mini-images > div > a{
+.banner-images, .banner-diensten-link{
 	width: 300px;
 	display: inline-block;
 	height: 200px;
 	text-align: center;
 }
 
-.mini-image-middle{
-	margin: 0px 46px;
+.banner-diensten-link{
+	text-decoration: none;
 }
 
-.mini-images > div > p, .mini-images > div > a{
+.banner-images-titles{
 	background-color: rgba(34,41,49,0.8);
 	color: white;
 	font-weight: 600;
@@ -326,68 +357,19 @@ hr{
 	margin: 0;
 }
 
-.mini-images > div:hover p, .mini-images > div:hover a{
+.banner-images:hover .banner-images-titles{
 	opacity: 1;
 }
 
-.mini-images > div:hover a, .menu-items-div > a{
-	text-decoration: none;
-}
-
-
-
-.footer{
-	position: relative;
-	margin-top: 50px;
-	width: 100%;
-}
-
-
-.mini-image-left{
+.banner-images-left{
 	background-image:url(img/banner-1.jpg);
 }
 
-.mini-image-middle{
+.banner-images-middle{
 	background-image:url(img/banner-2.jpg);
+	margin: 0px 46px;
 }
 
-.mini-image-right{
+.banner-images-right{
 	background-image:url(img/banner-3.jpg);
-}
-
-
-
-
-/* Diensten page */
-
-.breadcrumb{
-	margin-bottom: 50px;
-}
-
-.breadcrumb a{
-	text-decoration: none;
-	font-weight: 400;
-	font-size: 12px;
-}
-
-.breadcrumb, .breadcrumb a{
-	color: #5f656d;
-}
-
-.breadcrumbText{
-	width: 900px;
-}
-
-.breadcrumbText p{
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: 500;
-}
-
-.breadcrumbText span{
-	color: #ffe718;
-}
-
-.informationTextDiensten p{
-	color: #aeb6be;
 }
